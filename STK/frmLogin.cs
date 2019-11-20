@@ -54,7 +54,7 @@ namespace STK
             FrmSig f = new FrmSig();
             f.Show();
         }
-        public static bool isEmail(string inputEmail)
+        public bool isEmail(string inputEmail)
         {
             inputEmail = inputEmail ?? string.Empty;
             string strRegex = @"\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*";
@@ -65,7 +65,7 @@ namespace STK
                 return (false);
         }
 
-        bool ValidatePassword(string password)
+        public bool ValidatePassword(string password)
         {
             var hasNumber = new Regex(@"[0-9]+");
             var hasLowerChar = new Regex(@"[a-z]+");

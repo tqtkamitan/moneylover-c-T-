@@ -77,5 +77,23 @@ namespace STK
 
             Assert.AreEqual(false, frm.denHan("10"));
         }
+
+        [Test]
+        public void isEmail()
+        {
+            frmLogin frm = new frmLogin();
+            Assert.AreEqual(true, frm.isEmail("QuangTan@gmail.com"));
+
+            Assert.AreEqual(false, frm.isEmail("QuangTan@gmail.com"));
+        }
+
+        [Test]
+        public void ValidatePassword()
+        {
+            frmLogin frm = new frmLogin();
+            Assert.AreEqual(true, frm.ValidatePassword("-abcd1234"));
+
+            Assert.AreEqual(false, frm.ValidatePassword("-abcd1234"));
+        }
     }
 }
